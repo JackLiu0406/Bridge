@@ -42,13 +42,15 @@ xlabel('x')
 ylabel('SF')
 title('SFD train load')
 
+BMD_TL = cumsum(SFD_TL);
 subplot(2,1,2)
 plot(BMD_TL,'blue') % plot the BM_matrix against x
 xlabel('X')
 ylabel('BM')
 title('BMD train load')
 set(gca, 'YDir', 'reverse')
-Cross-Sections:
+
+% Cross-Sections:
 %% 2. Define Cross-Section Inputs & Calculate Cross-Section Properties
 % Design0 Cross Section Inputs
 xc = [0 400 800 L]; % Location, x, of cross-section change
@@ -84,7 +86,7 @@ E = 4000;   % Young's Modulus
 TauU = 4;   % Shear strength, matboard
 TauG = 2;   % Shear strength, glue
 mu = 0.2;   % Poisson's ratio
-Stress:
+% Stress:
 
 % Functions:
 
